@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<style>
+.button {
+	background-color: #E7E7E7;
+	color: black;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.container {
+	border: 3px solid #fff;
+	padding: 10px 150px;
+}
+
+.w3-center {
+	width: 140%;
+	float: center;
+	padding: 2rem;
+}
+</style>
+<title>맛집 추천</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center"
+		style="display:none" id="mySidebar">
+	<h1 class="w3-xxxlarge w3-text-theme">Navigation</h1>
+	<button class="w3-bar-item w3-button" onclick="w3_close()">
+		Close <i class="fa fa-remove"></i>
+	</button>
+	<a href="total?command=restaurantgetAll" class="w3-bar-item w3-button">1.모든
+		레스토랑 보기</a> <a href="categoryList.jsp" class="w3-bar-item w3-button">2.
+		레스토랑 추천 받기</a> </nav>
+
+	<center>
+		<header class="w3-container w3-theme w3-padding" id="myHeader">
+		<i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+		<div class="w3-cen">
+			<h4>Make better choice!</h4>
+			<h1 class="w3-xxxlarge w3-animate-bottom">플레이데이터 주변 맛집 추천</h1>
+			<div class="w3-padding-32"></div>
+		</div>
+		</header>
+	<br>
+	<br>
+	<br>
+		<img src="img/a1.png">
+		<hr>
+		<div class="w3-row-padding w3-center w3-margin-top">
+			<div class="container">
+				<div class="w3-third">
+					<div class="w3-card w3-container" style="min-height: 460px">
+						<h3>
+							Lists of Restaurants <br> &nbsp;&nbsp;&nbsp;<a
+								href="total?command=restaurantgetAll"><button
+									class="button button">click me!</button></a>
+						</h3>
+						<br> <i class="fa fa-desktop w3-margin-bottom w3-text-theme"
+							style="font-size: 120px"></i>
+						<p>Administrators only</p>
+					</div>
+				</div>
+				<div class="w3-third">
+					<div class="w3-card w3-container" style="min-height: 460px">
+						<h3>
+							Find Restaurants <br> &nbsp;&nbsp;&nbsp;<a
+								href="categoryList.jsp"><button class="button button">click
+									me!</button></a>
+						</h3>
+						<br> <i class="fa fa-cutlery w3-margin-bottom w3-text-theme"
+							style="font-size: 120px"></i>
+						<p>Find your perfect restaurants!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	<script>
+		function w3_open() {
+			var x = document.getElementById("mySidebar");
+			x.style.width = "100%";
+			x.style.fontSize = "40px";
+			x.style.paddingTop = "10%";
+			x.style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+</body>
+</html>
